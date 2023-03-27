@@ -1,16 +1,8 @@
-﻿using MotoApp;
+﻿using MotoApp.Entities;
+using MotoApp.Repositories;
 
-var stack = new BasicStack<double>();
-stack.Push(4.3);
-stack.Push(433);
-stack.Push(3.2);
-
-double sum = 0.0;
-
-while (stack.Count > 0)
-{
-    double item = stack.Pop();
-    Console.WriteLine($"Item: {item}");
-    sum += item;
-}
-Console.WriteLine($"Total: {sum}");
+var employeeRepository = new GenericRepository<Employee>();
+employeeRepository.Add(new Employee { FirstName = "Kasia" });
+employeeRepository.Add(new Employee { FirstName = "Domcia" });
+employeeRepository.Add(new Employee { FirstName = "Darek" });
+employeeRepository.Save();
