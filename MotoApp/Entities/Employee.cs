@@ -3,7 +3,7 @@
     public class Employee : EntityBase
     {
         public string? FirstName { get; set; }
-        public override string ToString() => $"ID: {Id}, FirstName: {FirstName}";
+        public override string ToString() => $"ID: {ID}, FirstName: {FirstName}";
 
     }
 }
